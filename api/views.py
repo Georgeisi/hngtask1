@@ -9,18 +9,25 @@ from datetime import datetime
 @api_view(['GET'])
 def home(request):
     if request.method == 'GET':
-        # Get the current UTC time
+        slack_name = request.GET.get('slack_name', None)
+        track = request.GET.get('track', None)
         current_utc_time = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
 
-        # Get the current day
+       
         current_day = datetime.utcnow().strftime('%A')
 
         return Response({
-            'slack_name': 'George',
+            'slack_name': slack_name,
             'current_day': current_day,
             'utc_time': current_utc_time,
+            'track':track,
+            'github_file_url':'https://github.com/Georgeisi/hngtask1/blob/main/api/views.py',
+            'github_repo_url': 'https://github.com/Georgeisi/hngtask1/tree/main',
             'Status_code': '200'
         })
+    
+
+
 
 
 
