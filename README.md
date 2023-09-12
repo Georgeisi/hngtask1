@@ -30,9 +30,9 @@ Short description of your API.
 THIS IS A SIMPLE RESTAPI FOR A CRUD APPLICATION
 
 ## End-points
-api/docs - To view documentation with swagger ui
-api/create - To Create a person and get all people in the database
-api/persons/id - To Get a single person , Update a single person and delete a person
+<!-- api/docs - To view documentation with swagger ui -->
+api/ -     To Create a person and get all people in the database
+api/user_id   - To Get a single person , Update a single person and delete a person
 
 
 ## Features
